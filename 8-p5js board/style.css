@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.options {
+    padding: 10px;
+    width: 75px;
+    height: calc(100vh - 20px);
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 100;  
+}
+
+.bg {
+    width: 20px;
+    height: 20px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.brush .bg {
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+    height: 65px;
+    margin: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.btn.save > .bg {
+    background-image: url('/assets/save-icon.svg');
+}
+
+.btn.rubber > .bg {
+    background-image: url('/assets/rubber.png');
+}
+
+.btn.wipe > .bg {
+    background-image: url('/assets/clear.png');
+}
+
+.btn.color > .bg {
+    /* border: 2px solid black; */
+    background-color: black;
+}
+
+#color-picker {
+    display: none;
+}
+
+
+.btn.rubber.active {
+    background-color: rgba(0, 0, 0, 0.15);
+}
